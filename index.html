@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday Thangamey!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Password Protection Layer -->
+    <div id="password-screen" class="overlay">
+        <div class="glass-card">
+            <h1>🔐 Private Access</h1>
+            <p>Enter the secret word to unlock the surprise</p>
+            <input type="password" id="password-input" placeholder="Hint: Your special name...">
+            <button onclick="checkPassword()">Unlock the Love</button>
+            <p id="error-msg" class="error"></p>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden initially) -->
+    <div id="main-content" class="hidden">
+        <div id="bg-canvas-container"></div>
+        
+        <header>
+            <div class="countdown-container">
+                <h2>Countdown to 20</h2>
+                <div id="countdown">
+                    <span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span id="seconds">00</span>s
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1 class="glow-text">Happy 20th Birthday, Soul Man!</h1>
+            <p class="subtitle">Happy kuva kuva igloo ❄️</p>
+        </section>
+
+        <section class="the-3d-scene">
+            <div id="three-container"></div>
+            <div class="overlay-text">
+                <h3>Happy Born Day Thangooo!</h3>
+            </div>
+        </section>
+
+        <section class="slideshow-section">
+            <div class="slideshow">
+                <div class="slide fade" style="display: block;">
+                    <img src="birthday_beach_no_chairs_1776706653122.png" alt="Memories">
+                    <div class="caption">Our Beautiful Memories</div>
+                </div>
+                <div class="slide fade">
+                    <div class="placeholder-slide">✨ You are the one ✨</div>
+                    <div class="caption">Wishing many more happy returns of the day!</div>
+                </div>
+                <div class="slide fade">
+                    <div class="placeholder-slide">💖 Soul Man 💖</div>
+                    <div class="caption">Currently flourishing as a proud son.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="typewriter-section">
+            <div class="glass-container">
+                <p id="typewriter-text"></p>
+            </div>
+        </section>
+
+        <section class="wishes-grid">
+            <h2>20 Wishes, 20 Languages</h2>
+            <div id="wishes-container"></div>
+        </section>
+
+        <footer>
+            <p>Made with ❤️ for Thangamey | Happy 20!</p>
+        </footer>
+    </div>
+
+    <!-- Hidden Audio for Auto-play after interaction -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

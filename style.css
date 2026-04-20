@@ -1,0 +1,287 @@
+:root {
+    --silver-grey: #C0C0C0;
+    --baby-pink: #F4C2C2;
+    --dark-grey: #4A4A4A;
+    --white: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, var(--silver-grey), var(--baby-pink));
+    color: var(--dark-grey);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: var(--white);
+    max-width: 400px;
+}
+
+.glass-card h1 {
+    margin-bottom: 1rem;
+    color: var(--baby-pink);
+}
+
+.glass-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.glass-card button {
+    background: var(--baby-pink);
+    color: var(--dark-grey);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.glass-card button:hover {
+    transform: scale(1.05);
+}
+
+.error {
+    color: #ff4d4d;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Header & Countdown */
+header {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.countdown-container h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+#countdown {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--dark-grey);
+}
+
+/* Hero Section */
+.hero {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.glow-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--white);
+    text-shadow: 0 0 10px rgba(244, 194, 194, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* 3D Scene */
+.the-3d-scene {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background: transparent;
+}
+
+#three-container {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    text-align: center;
+}
+
+.overlay-text h3 {
+    font-size: 2rem;
+    background: var(--glass-bg);
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Slideshow */
+.slideshow-section {
+    padding: 4rem 2rem;
+}
+
+.slideshow {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.placeholder-slide {
+    width: 100%;
+    height: 450px;
+    background: var(--silver-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.fade {
+    animation: fadeAnim 1.5s ease-in-out;
+}
+
+@keyframes fadeAnim {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Typewriter Section */
+.typewriter-section {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+/* Wishes Grid */
+.wishes-grid {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.wishes-grid h2 {
+    margin-bottom: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+#wishes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wish-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.wish-card:hover {
+    transform: translateY(-5px);
+    background: var(--baby-pink);
+}
+
+.wish-lang {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.wish-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .glow-text { font-size: 2.5rem; }
+}
